@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'monospace';
+  font-size: 18px;
+  /* background-color: #f4f4f4; */
+}
+
+
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('E:\advApp\job-app\src\assets\images\im.jpg'); /* Replace with the path to your background image */
+  background-size: contain;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+}
+
+
+.registration-box {
+  background-color: rgba(160, 124, 124, 0.123); /* Semi-transparent white background for the form */
+  border: 2px solid #9680801f;
+  padding: 23px;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(245, 208, 208, 0.945);
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+
+/* Add space between form elements */
+.registration-box label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+.registration-box label span {
+  margin-bottom: 5px;
+}
+
+.registration-box input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.301);
+  border: 0.5px solid #cccccc00;
+  border-radius: 5px;
+}
+
+.registration-box button {
+  background-color: #f5baba6b;
+  align-self: center;
+  color: rgb(8, 8, 8);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.registration-box button:hover {
+  background-color: #ec4646;
+}
+/* Add additional styling for form fields and button as needed */
+.registration-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Add this CSS for Register and Sign In buttons */
+
+.homepage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('E:\advApp\job-app\src\assets\images\im.jpg');
+  background-size: contain;
+  background-position: center;
+}
+
+.homepage-content {
+  background-color: rgba(160, 124, 124, 0.123);
+  border: 2px solid #9680801f;
+  padding: 23px;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(245, 208, 208, 0.945);
+  text-align: center;
+}
+
+.homepage-content h2 {
+  margin-bottom: 20px;
+}
+
+.homepage-content h3 {
+  margin-bottom: 10px;
+}
+
+.homepage-content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.homepage-content input {
+  margin-right: 5px;
+}
+
+.homepage-content .action-buttons {
+  margin-top: 20px;
+}
+
+.homepage-content .action-buttons h3 {
+  margin-bottom: 10px;
+}
+
+.homepage-content .action-buttons button {
+  background-color: #f5baba6b;
+  color: rgb(8, 8, 8);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.homepage-content .action-buttons button:hover {
+  background-color: #ec4646;
+}
+
+.homepage-content button {
+  background-color: #f5baba6b;
+  align-self: center;
+  color: rgb(8, 8, 8);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.homepage-content button:hover {
+  background-color: #ec4646;
+}
+
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('E:\advApp\job-app\src\assets\images\im.jpg');
+  background-size: contain;
+  background-position: center;
+}
+
+.signin-content {
+  background-color: rgba(160, 124, 124, 0.123);
+  border: 2px solid #9680801f;
+  padding: 23px;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(245, 208, 208, 0.945);
+  text-align: center;
+}
+
+.signin-content h2 {
+  margin-bottom: 15px;
+}
+
+.signin-content form {
+  margin-bottom: 15px;
+}
+
+.signin-content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.signin-content input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  background-color: rgba(255, 255, 255, 0.212);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.signin-content button {
+  background-color: #f5baba6b;
+  color: rgb(8, 8, 8);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signin-content button:hover {
+  background-color: #ec4646;
+}
+
+.signin-content .back-to-home {
+  margin-top: 10px;
+}
+
+.signin-content .back-to-home a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.signin-content .back-to-home a:hover {
+  text-decoration: underline;
+}
