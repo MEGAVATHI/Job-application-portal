@@ -1,0 +1,94 @@
+/* dashboard.css */
+
+
+body {
+  background-color: #87caf744;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: #dff3f2d5;
+  color: #050404;
+  padding: 0.2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+/* 
+.logo img {
+  height: 40px; 
+  margin-right: 10px;
+  width:100%;/* Adjust the logo height as needed */
+/* } */ 
+
+.nav-content {
+  display: flex;
+  align-items: center;
+}
+
+.nav-title {
+  font-size: 20px;
+  color: #000000fa;
+  margin-left: 10px;
+}
+
+.main-content {
+  padding: 20px;
+  background-color: #94d5e921;
+  height:100vh;
+  
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+h1 {
+  margin: 20px 20px; /* You can adjust the top and bottom margin as needed */
+}
+p{
+  margin: 20px 40px; 
+}
+
+
+/* UserDetails.css */
+/* UserDetails.css */
+
+.user-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-details-table th, .user-details-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.user-details-table th {
+  background-color: #f2f2f2;
+}
+
+/* Add a style for table rows */
+.user-details-table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Remove the border for the last row */
+.user-details-table tr:last-child {
+  border-bottom: none;
+}

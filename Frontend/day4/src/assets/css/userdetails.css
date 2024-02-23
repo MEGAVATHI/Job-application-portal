@@ -1,0 +1,125 @@
+/* UserDetails.css */
+
+
+body {
+    background-color: #87caf736;
+    margin: 0;
+    padding: 0;
+}
+.user-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .user-details-table th, .user-details-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .user-details-table th {
+    background-color: #04243a5b;
+  }
+  
+  /* Add a style for table rows */
+  .user-details-table tr {
+    border-bottom: 1px solid #718ff3;
+  }
+  
+  /* Remove the border for the last row */
+  .user-details-table tr:last-child {
+    border-bottom: none;
+  }
+  .nav-title {
+    font-family: sans-serif;
+  font-weight: bold;
+
+    font-size: 30px;
+    color: #000000fa;
+    margin-left: 10px;
+  }
+  
+
+  .navbar {
+    background-color: #78abf74f;
+    color: #050404;
+    padding: 0.2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  /* UpdateStatusPage.css */
+
+.table-container {
+  border-collapse: collapse;
+  width: 90%; /* Adjust the width as needed */
+  margin: 80px auto; /* Center the table horizontally */
+  border: 2px solid #ddd;
+}
+
+.table-container th, .table-container td {
+  border: 1px solid #ddd;
+  padding: 8px 40px;
+  text-align: left;
+}
+
+.table-container th {
+  background-color: #04243ad2;
+  color: #fff; /* Set text color for header */
+  
+  margin-bottom: 100px;
+}
+
+.table-container tr {
+  border-bottom: 1px solid #718ff3;
+}
+
+.table-container tr:last-child {
+  border-bottom: none;
+}
+
+.table-container select {
+  padding: 8px; /* Adjust padding for select */
+  margin-right: 8px;
+}
+
+.table-container button {
+  background-color: #04243ad2;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* UpdateStatusPage.css */
+
+.button-container {
+  margin-top: 20px; /* Adjust margin as needed */
+  text-align: center;
+}
+
+.update-button {
+  background-color: #04243ad2;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.success-message {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+  
