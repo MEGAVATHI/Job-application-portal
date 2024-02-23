@@ -1,0 +1,187 @@
+/* joblist.css */
+
+body {
+    background-color: #618aa14d;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bold;
+  }
+.navbar {
+    background-color: #6de3f333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-title {
+    font-size: 20px;
+    color: #000000fa;
+    margin-left: 20px;
+  }
+  
+  /* ... (rest of your styles) */
+  
+.job-list-container {
+    padding: 20px;
+  }
+  
+  .job-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+  }
+  
+  .job-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    margin-bottom: 40px; 
+  }
+  
+  .job-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .job-item button {
+    background-color: #05314bbb; /* Red color for delete button */
+    color: #fff;
+    border: none;
+    padding: 12px; /* Increased button size */
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 15px; /* Increased margin */
+    font-size: 14px; /* Font size */
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: transform 0.3s ease; /* Transition effect for scaling */
+  }
+  
+  .job-item button:hover {
+    transform: scale(1.1); /* Scale up on hover */
+  }
+  
+/* AddJobPage.css */
+
+
+.add-job-page {
+  background-image: url('E:\advApp\job-app\src\assets\images\Untitled design.png');
+  background-size: cover;
+  background-position: center;
+  height: 100%; /* Adjust the height as needed */
+  /* Add any additional styling you want for the background */
+}
+
+.add-job-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width:400px;
+}
+.add-job-box {
+  background-color: rgba(160, 124, 124, 0.123); /* Semi-transparent white background for the form */
+  border: 2px solid #9680801f;
+  padding: 23px;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(245, 208, 208, 0.945);
+}
+
+
+.add-job-form {
+  background-color: #3880df3d; /* White background */
+  border: 2px solid #9680801f;
+  padding: 50px 30px;
+  width: 100%; /* Adjust the width as needed */
+  max-width: 800px; /* Set a maximum width if needed */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(3, 17, 99, 0.616);
+  text-align: center;
+  margin-left: 100px; /* Adjust margin as needed */
+}
+
+.add-job-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.add-job-form label span {
+  margin-top: 2px;
+}
+
+.add-job-form input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.301);
+  border: 0.5px solid #cccccc00;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.add-job-form button {
+  background-color: #2465f36b;
+  align-self: center;
+  color: rgb(8, 8, 8);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-job-form button:hover {
+  background-color: #112daabb;
+}
+
+
+.add-job-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+.add-job-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+
+.add-button {
+  background-color: #05314bbb;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px; 
+}
+
+.add-button:hover {
+  transform: scale(1.1);
+}
+
+.add-job-image {
+  max-width: 50px; /* Adjust the max-width as needed */
+}
