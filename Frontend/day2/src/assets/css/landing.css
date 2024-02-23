@@ -1,0 +1,151 @@
+/* landing.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(96, 169, 238, 0.13); /* Transparent background for the navbar */
+  position: absolute; 
+  left:0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 20px;
+}
+nav a::after {
+  content: ''; /* Create a pseudo-element for the underline */
+  position: absolute;
+  left: 50%; /* Center the underline */
+  bottom: -5px;
+  transform: translateX(-50%);
+  width: 0%; /* Initially hide the underline */
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: transparent; /* Set the underline color */
+  transition: width 0.3s ease-in-out; /* Add a smooth width transition */
+}
+
+nav a:hover::after {
+  width: 100%; 
+  background-color:white;/* Expand the underline on hover */
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  font-weight: normal; /* Set initial font weight */
+  font-size: 20px; /* Set initial font size */
+  transition: font-size 0.3s ease-in-out;
+
+}
+
+nav a:hover {
+  color: white;
+  font-weight:bold; /* Change to the desired hover color */
+   /* Add underline on hover */
+   font-size: 18px;
+}
+
+section#welcome {
+  position: relative;
+  background-image: url('E:/advApp/job-app/src/assets/images/ll.webp');
+  background-size: cover;
+  background-position: center;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+section#welcome::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px; /* Adjust the height of the curve */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+main {
+  padding: 20px;
+}
+
+/* landing.css */
+
+#features,
+#about,
+#contact,
+#social-media {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#features.visible,
+#about.visible,
+#contact.visible,
+#social-media.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section#welcome::after {
+  /* ... (existing code) */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+/* Additional styles for the floating content box */
+.content-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+#features.visible .content-box,
+#about.visible .content-box,
+#contact.visible .content-box,
+#social-media.visible .content-box {
+  transform: translateY(0);
+}
+
+
+
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+header {
+  background-color: transparent; /* Transparent background for the header */
+  padding: 20px;
+  color: white;
+  left:0;
+}
