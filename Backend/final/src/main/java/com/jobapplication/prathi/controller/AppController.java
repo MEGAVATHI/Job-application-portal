@@ -1,0 +1,92 @@
+package com.jobapplication.prathi.controller;
+
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
+import com.jobapplication.prathi.dto.request.CreateAppRequest;
+import com.jobapplication.prathi.dto.response.AppFetchResponse;
+import com.jobapplication.prathi.dto.response.MessageResponse;
+import com.jobapplication.prathi.service.AppService;
+import com.jobapplication.prathi.utils.MyConstant;
+import com.jobapplication.prathi.utils.UserNotFoundException;
+
+import lombok.RequiredArgsConstructor;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping(MyConstant.USER + "/applications")
+@PreAuthorize("hasAnyRole('USER','ADMIN')")
+public class AppController {
+
+    private final AppService appService;
+
+    @PostMapping(MyConstant.CREATE)
+    public ResponseEntity<MessageResponse> createApp(@RequestBody CreateAppRequest request) {
+        MessageResponse response = appService.create(request);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
+    }
+
+    @GetMapping(MyConstant.GET)
+    public ResponseEntity<?> getAllApps() {
+        return new ResponseEntity<>(appService.getAll(), HttpStatus.OK);
+    }
+
+    @GetMapping(MyConstant.GET+"/{id}")
+    public ResponseEntity<?> getAppById(@PathVariable Long id) {
+        try {
+            AppFetchResponse response = appService.getById(id);
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } catch (Exception e) {
+            MessageResponse responseMessage = MessageResponse.builder().message(e.getMessage()).build();
+            return new ResponseEntity<>(responseMessage, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @PutMapping(MyConstant.UPDATE+"/{id}")
+    public ResponseEntity<MessageResponse> updateApp(@PathVariable Long id, @RequestBody CreateAppRequest request) {
+        try {
+            MessageResponse response = appService.update(id, request);
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } catch (Exception e) {
+            MessageResponse responseMessage = MessageResponse.builder().message(e.getMessage()).build();
+            return new ResponseEntity<>(responseMessage, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @DeleteMapping(MyConstant.DELETE+"/{id}")
+    public ResponseEntity<MessageResponse> deleteApp(@PathVariable Long id) {
+        try {
+            MessageResponse response = appService.deleteById(id);
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } catch (Exception e) {
+            MessageResponse responseMessage = MessageResponse.builder().message(e.getMessage()).build();
+            return new ResponseEntity<>(responseMessage, HttpStatus.NOT_FOUND);
+        }
+    }
+    @PatchMapping(MyConstant.UPDATE + "/{id}/{status}")
+    public ResponseEntity<MessageResponse> updateStatus(@PathVariable Long id, @PathVariable String status) {
+        try {
+            MessageResponse response = appService.updateStatus(id, status);
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } catch (Exception e) {
+            MessageResponse responseMessage = MessageResponse.builder().message(e.getMessage()).build();
+            return new ResponseEntity<>(responseMessage, HttpStatus.NOT_FOUND);
+        }
+    }
+    @GetMapping("/email/{email}")
+public ResponseEntity<?> getByEmail(@PathVariable String email) {
+    try {
+        List<AppFetchResponse> response = appService.getByEmail(email);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    } catch (UserNotFoundException e) {
+        var responseMessage = MessageResponse.builder().message(e.getMessage()).build();
+        return new ResponseEntity<>(responseMessage, HttpStatus.NOT_FOUND);
+    } catch (Exception e) {
+        return new ResponseEntity<>(new MessageResponse(), HttpStatus.EXPECTATION_FAILED);
+    }
+}
+
+}
